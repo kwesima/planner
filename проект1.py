@@ -35,7 +35,7 @@ class Window1(QWidget):
         self.add_item.clicked.connect(self.add_now)
 
     def add_now(self):
-        data_of_item = self.calendarWidget.selectedDate().getDate()
+        data_of_item = self.calendar.selectedDate().getDate()
 
         if int(data_of_item[1]) <= 9:
             data_of_item = (data_of_item[0], '0' + str(data_of_item[1]), data_of_item[-1])
